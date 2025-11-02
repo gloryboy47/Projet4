@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CANDrive Maroc 2025 | Location Voiture CAN 2025</title>
+  <meta name="description" content="Location de voitures pour la CAN 2025 au Maroc. Réduction 30% pour les supporters. Réservez votre SUV, berline ou citadine dès maintenant." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>CAN<span>Drive</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#cars">Voitures</a></li>
+        <li><a href="#stades">Stades</a></li>
+        <li><a href="#reservation">Réserver</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Partez à la conquête de la <span>CAN 2025</span></h1>
+      <p class="subtitle">Location de voitures premium avec <strong>-30% pour les supporters</strong></p>
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><small>Jours</small></div>
+        <div><span id="hours">00</span><small>Heures</small></div>
+        <div><span id="minutes">00</span><small>Min</small></div>
+        <div><span id="seconds">00</span><small>Sec</small></div>
+      </div>
+      <a href="#reservation" class="cta-btn">Réserver avec -30%</a>
+    </div>
+  </header>
+
+  <!-- Offer Banner -->
+  <section class="offer-banner">
+    <p>🎟️ <strong>Offre CAN 2025</strong> : Présentez votre badge supporter et bénéficiez de <strong>-30%</strong> sur toute réservation !</p>
+  </section>
+
+  <!-- Cars Section -->
+  <section id="cars" class="cars-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Notre flotte premium</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="100">Des véhicules neufs, climatisés, GPS inclus, assurance tous risques.</p>
+
+      <div class="cars-grid">
+        <div class="car-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="car-img">
+            <img src="https://cdn.pixabay.com/photo/2016/02/19/11/19/car-1209912_960_720.jpg" alt="Citadine">
+            <span class="badge">Éco</span>
+          </div>
+          <div class="car-info">
+            <h3>Citadine</h3>
+            <p>Parfaite pour la ville</p>
+            <div class="price">À partir de <strong>250 DH/jour</strong></div>
+            <button class="select-car btn" data-car="Citadine">Choisir</button>
+          </div>
+        </div>
+
+        <div class="car-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="car-img">
+            <img src="https://cdn.pixabay.com/photo/2018/02/24/18/06/suv-3179122_960_720.jpg" alt="SUV">
+            <span class="badge popular">Populaire</span>
+          </div>
+          <div class="car-info">
+            <h3>SUV 4x4</h3>
+            <p>Pour les routes du Maroc</p>
+            <div class="price">À partir de <strong>450 DH/jour</strong></div>
+            <button class="select-car btn" data-car="SUV 4x4">Choisir</button>
+          </div>
+        </div>
+
+        <div class="car-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="car-img">
+            <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="Berline">
+            <span class="badge">Luxe</span>
+          </div>
+          <div class="car-info">
+            <h3>Berline Premium</h3>
+            <p>Confort absolu</p>
+            <div class="price">À partir de <strong>600 DH/jour</strong></div>
+            <button class="select-car btn" data-car="Berline Premium">Choisir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stades & Trajets -->
+  <section id="stades" class="stades-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Stades & Trajets optimisés</h2>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="100">Nous vous emmenons directement aux stades depuis votre hôtel.</p>
+      <div class="map-placeholder" data-aos="zoom-in" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26548.456!2d-6.864!3d33.971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzE0LjAiTiA2wrA1MSc5MC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 data-aos="fade-up">Ils nous ont fait confiance</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-right">
+          <p>"Service impeccable, voiture propre, GPS en français. Parfait pour suivre la CAN !"</p>
+          <div class="author">— Amine K., Casablanca</div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <p>"J'ai eu -30% avec mon badge supporter. Livraison à l'hôtel, rien à dire !"</p>
+          <div class="author">— Fatima Z., Rabat</div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-left" data-aos-delay="200">
+          <p>"SUV spacieux pour 5 personnes. Idéal pour aller au stade de Marrakech."</p>
+          <div class="author">— Youssef M., Agadir</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section id="reservation" class="reservation-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Réservez en 3 étapes</h2>
+      <form id="reservationForm" class="reservation-form" data-aos="fade-up" data-aos-delay="100">
+        <div class="form-step active" data-step="1">
+          <label>Voiture</label>
+          <select id="car" required>
+            <option value="">Choisissez votre modèle</option>
+            <option value="Citadine">Citadine - 250 DH/j</option>
+            <option value="SUV 4x4">SUV 4x4 - 450 DH/j</option>
+            <option value="Berline Premium">Berline Premium - 600 DH/j</option>
+          </select>
+          <button type="button" class="next-step">Suivant</button>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <label>Dates</label>
+          <input type="date" id="start" required />
+          <input type="date" id="end" required />
+          <button type="button" class="prev-step">Précédent</button>
+          <button type="button" class="next-step">Suivant</button>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <label>Nom complet</label>
+          <input type="text" id="name" required />
+          <label>Ville de retrait</label>
+          <input type="text" id="city" placeholder="Ex: Casablanca, Marrakech..." required />
+          <label>Avez-vous un badge CAN ?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" id="badge"> Oui, j'ai mon badge supporter (-30%)</label>
+          </div>
+          <button type="button" class="prev-step">Précédent</button>
+          <button type="submit" class="submit-btn">Confirmer la réservation</button>
+        </div>
+      </form>
+      <p id="confirmation" class="confirmation-msg hidden"></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Une question ?</h2>
+      <form id="contactForm" data-aos="fade-up" data-aos-delay="100">
+        <input type="text" placeholder="Nom complet" id="contactName" required />
+        <input type="email" placeholder="Email" id="contactEmail" required />
+        <textarea placeholder="Votre message..." id="contactMessage" rows="5" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+      <p id="contactConfirmation" class="hidden"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>CANDrive Maroc</h3>
+          <p>Location premium pour la CAN 2025</p>
+        </div>
+        <div>
+          <p>📍 Casablanca, Rabat, Marrakech, Tanger</p>
+          <p>📞 +212 6 12 34 56 78</p>
+          <p>✉️ contact@candrive.ma</p>
+        </div>
+        <div>
+          <p>Suivez-nous :</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 CANDrive – Projet professionnel</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
