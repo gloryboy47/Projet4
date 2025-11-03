@@ -559,3 +559,28 @@ h2 { font-size: 2.4rem; text-align: center; margin-bottom: 1rem; }
   background: var(--primary);
   border-radius: 2px;
 }
+/* === BOUTONS RAPIDES === */
+.quick-replies {
+  max-height: 100px;
+  overflow-y: auto;
+  background: var(--bg);
+}
+
+.quick-btn {
+  background: rgba(10,92,54,0.1);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  padding: 0.5rem 0.9rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.quick-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-1px);
+}
