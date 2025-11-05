@@ -1,361 +1,322 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CANDrive.ma | Location Voiture Premium CAN 2025</title>
-  <meta name="description" content="Location de voitures haut de gamme pour la CAN 2025. -30% avec badge supporter. Réservez en 60 secondes." />
+  <title>CANDrive.ma | Location Voiture Premium CAN 2025 Maroc</title>
+  <meta name="description" content="Location de voitures premium pour la CAN 2025 au Maroc. -30% avec badge supporter. Livraison stade, Tesla, SUV, Réservation instantanée." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="CANDrive.ma - Location Voiture CAN 2025" />
+  <meta property="og:description" content="-30% avec badge. Livraison stade. Voitures premium." />
+  <meta property="og:image" content="https://candrive.ma/og-image.jpg" />
+  <meta property="og:url" content="https://candrive.ma" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0A5C36">
 
   <!-- Fonts -->
-  <style type="text/css">@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/greek/wght/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/latin-ext/wght/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.0.16/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Libre Baskerville;font-style:normal;font-weight:700;src:url(/cf-fonts/s/libre-baskerville/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Libre Baskerville;font-style:normal;font-weight:700;src:url(/cf-fonts/s/libre-baskerville/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
   <!-- Theme Toggle -->
-  <button id="themeToggle" class="theme-toggle">
+  <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
     <i class="fas fa-moon"></i>
   </button>
 
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <button id="langFR" class="active">FR</button>
+    <button id="langEN">EN</button>
+    <button id="langAR">AR</button>
+  </div>
+
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
   <!-- Header -->
-  <header class="hero">
-    <nav class="navbar">
+  <header class="hero" id="home">
+    <nav class="navbar container" aria-label="Navigation principale">
       <div class="logo">
-        <h1>CAN<span>Drive</span></h1>
+        <h1><span>CAN</span>Drive</h1>
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#fleet">Flotte</a></li>
-        <li><a href="#stades">Stades</a></li>
-        <li><a href="#book">Réserver</a></li>
-        <li><a href="#testimonials">Témoignages</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-tr="Accueil">Accueil</a></li>
+        <li><a href="#fleet" data-tr="Flotte">Flotte</a></li>
+        <li><a href="#stades" data-tr="Stades">Stades</a></li>
+        <li><a href="#book" data-tr="Réserver">Réserver</a></li>
+        <li><a href="#testimonials" data-tr="Avis">Avis</a></li>
+        <li><a href="#contact" data-tr="Contact">Contact</a></li>
       </ul>
-      <div class="mobile-menu">
+      <button class="mobile-menu" aria-label="Ouvrir le menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </nav>
 
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Roulez en <span>Premium</span> pour la CAN 2025</h1>
-      <p class="subtitle">Véhicules neufs • GPS • Assurance • Livraison stade</p>
+    <div class="hero-content container" data-aos="fade-up">
+      <h1 data-tr="Roulez en <span>Premium</span> pour la CAN 2025">Roulez en <span>Premium</span> pour la CAN 2025</h1>
+      <p class="subtitle" data-tr="Véhicules neufs • GPS inclus • Assurance • Livraison stade">Véhicules neufs • GPS inclus • Assurance • Livraison stade</p>
+
+      <!-- Compteur CAN 2025 -->
+      <div class="countdown" data-aos="zoom-in">
+        <div class="count-item"><span id="days">--</span><small data-tr="Jours">Jours</small></div>
+        <div class="count-item"><span id="hours">--</span><small data-tr="Heures">Heures</small></div>
+        <div class="count-item"><span id="mins">--</span><small data-tr="Min">Min</small></div>
+        <div class="count-item"><span id="secs">--</span><small data-tr="Sec">Sec</small></div>
+      </div>
+
       <div class="offer-tag">
-        <i class="fas fa-ticket-alt"></i> -30% avec badge supporter
+        <i class="fas fa-ticket-alt"></i> <span data-tr="-30% avec badge supporter">-30% avec badge supporter</span>
       </div>
+
+      <!-- Scanner Badge -->
+      <div class="badge-scanner" data-aos="fade-up" data-aos-delay="300">
+        <button id="scanBadge" class="btn-primary accent">
+          <i class="fas fa-qrcode"></i> <span data-tr="Scanner mon badge CAN (-30%)">Scanner mon badge CAN (-30%)</span>
+        </button>
+        <p class="small" data-tr="Photo ou scan → réduction immédiate">Photo ou scan → réduction immédiate</p>
+      </div>
+
       <!-- Recherche rapide -->
-      <div class="search-bar" style="margin: 1rem 0; max-width: 400px;">
-        <input type="text" id="quickSearch" placeholder="Rechercher une voiture (ex: SUV)..." style="width: 100%; padding: 0.8rem; border-radius: 25px; border: none; box-shadow: var(--shadow);">
+      <div class="search-bar">
+        <input type="text" id="quickSearch" placeholder="SUV, Tesla, Casablanca..." aria-label="Recherche rapide" data-tr-placeholder="SUV, Tesla, Casablanca...">
       </div>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-        <a href="#fleet" class="btn-primary">Découvrir la flotte</a>
-        <a href="#fleet" class="btn-primary" style="background: var(--accent); color: #000;">Voitures disponibles</a>
+
+      <div class="hero-buttons">
+        <a href="#fleet" class="btn-primary" data-tr="Voir la flotte">Voir la flotte</a>
+        <a href="#book" class="btn-primary accent" data-tr="Réserver maintenant">Réserver maintenant</a>
+      </div>
+
+      <!-- Promo Flash -->
+      <div class="flash-promo" id="flashPromo">
+        <i class="fas fa-bolt"></i> <span data-tr="Offre Flash : Tesla Model 3 à 550 DH/jour !">Offre Flash : Tesla Model 3 à 550 DH/jour !</span>
+        <button id="closeFlash">×</button>
       </div>
     </div>
   </header>
 
-  <!-- Fleet -->
-  <section id="fleet" class="fleet">
-    <div class="container">
-      <h2 data-aos="fade-up">Notre flotte premium</h2>
-      <p class="section-desc" data-aos="fade-up" data-aos-delay="100">Des modèles 2024/2025, entretenus quotidiennement.</p>
+  <main id="main">
 
-      <!-- Filtres -->
-      <div class="filters" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-        <select id="carCategory" style="padding: 0.5rem; border-radius: 25px; border: 1px solid var(--border); background: var(--card); color: var(--text);">
-          <option value="">Toutes catégories</option>
-          <option value="economique">Économique</option>
-          <option value="suv">SUV</option>
-          <option value="luxe">Luxe</option>
-          <option value="electrique">Électrique</option>
-        </select>
-        <select id="transmission" style="padding: 0.5rem; border-radius: 25px; border: 1px solid var(--border); background: var(--card); color: var(--text);">
-          <option value="">Transmission</option>
-          <option value="manuelle">Manuelle</option>
-          <option value="auto">Automatique</option>
-        </select>
-        <input type="range" id="priceRange" min="200" max="800" value="800" style="width: 150px;">
-        <span id="priceValue" style="font-weight: 600; color: var(--primary);">800 DH max</span>
-        <button id="clearFilters" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem; background: var(--accent); color: #000;">Effacer</button>
-      </div>
+    <!-- Flotte -->
+    <section id="fleet" class="fleet section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Notre flotte premium">Notre flotte premium</h2>
+        <p class="section-desc" data-aos="fade-up" data-aos-delay="100" data-tr="Modèles 2024/2025 • Entretien quotidien • Disponibilité garantie">
+          Modèles 2024/2025 • Entretien quotidien • Disponibilité garantie
+        </p>
 
-      <div class="cars-grid" id="carsGrid">
-        <!-- Dacia Sandero -->
-        <article class="car-card" data-category="economique" data-transmission="manuelle" data-price="280" data-aos="fade-up" data-aos-delay="200">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2016/02/19/11/19/car-1209912_960_720.jpg" alt="Citadine">
-            <span class="tag">Économique</span>
-            <span class="availability available"><i class="fas fa-check"></i> Disponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Dacia Sandero</h3>
-            <p>Compacte, agile, idéale en ville</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 5</span>
-              <span><i class="fas fa-gas-pump"></i> Essence</span>
-              <span><i class="fas fa-snowflake"></i> Clim</span>
-            </div>
-            <div class="price">280 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Dacia Sandero 280 DH" data-price="280">Réserver</button>
-          </div>
-        </article>
-
-        <!-- Hyundai Tucson -->
-        <article class="car-card popular" data-category="suv" data-transmission="auto" data-price="480" data-aos="fade-up" data-aos-delay="300">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2018/02/24/18/06/suv-3179122_960_720.jpg" alt="SUV">
-            <span class="tag popular">Populaire</span>
-            <span class="availability available"><i class="fas fa-check"></i> Disponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Hyundai Tucson</h3>
-            <p>SUV 4x4, spacieux, tout terrain</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 5</span>
-              <span><i class="fas fa-suitcase-rolling"></i> 620L</span>
-              <span><i class="fas fa-shield-alt"></i> Tous risques</span>
-            </div>
-            <div class="price">480 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Hyundai Tucson 480 DH" data-price="480">Réserver</button>
-          </div>
-        </article>
-
-        <!-- Audi A6 -->
-        <article class="car-card" data-category="luxe" data-transmission="auto" data-price="720" data-aos="fade-up" data-aos-delay="400">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="Luxe">
-            <span class="tag">Luxe</span>
-            <span class="availability available"><i class="fas fa-check"></i> Disponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Audi A6</h3>
-            <p>Berline premium, cuir, silence</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 5</span>
-              <span><i class="fas fa-wifi"></i> WiFi</span>
-              <span><i class="fas fa-car-side"></i> Auto</span>
-            </div>
-            <div class="price">720 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Audi A6 720 DH" data-price="720">Réserver</button>
-          </div>
-        </article>
-
-        <!-- Renault Clio -->
-        <article class="car-card" data-category="economique" data-transmission="manuelle" data-price="250" data-aos="fade-up" data-aos-delay="500">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/cars-2602113_960_720.jpg" alt="Renault Clio">
-            <span class="tag">Économique</span>
-            <span class="availability unavailable"><i class="fas fa-times"></i> Indisponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Renault Clio</h3>
-            <p>City car économe, parfaite pour les trajets courts</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 4</span>
-              <span><i class="fas fa-gas-pump"></i> Essence</span>
-              <span><i class="fas fa-leaf"></i> Éco</span>
-            </div>
-            <div class="price">250 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Renault Clio 250 DH" data-price="250">Réserver</button>
-          </div>
-        </article>
-
-        <!-- Peugeot 3008 -->
-        <article class="car-card" data-category="suv" data-transmission="auto" data-price="550" data-aos="fade-up" data-aos-delay="600">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2017/08/30/01/05/mountain-road-2693918_960_720.jpg" alt="Peugeot 3008">
-            <span class="tag">SUV</span>
-            <span class="availability available"><i class="fas fa-check"></i> Disponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Peugeot 3008</h3>
-            <p>SUV hybride, confort et polyvalence</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 5</span>
-              <span><i class="fas fa-bolt"></i> Hybride</span>
-              <span><i class="fas fa-shield-alt"></i> Assurance incluse</span>
-            </div>
-            <div class="price">550 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Peugeot 3008 550 DH" data-price="550">Réserver</button>
-          </div>
-        </article>
-
-        <!-- Tesla Model 3 -->
-        <article class="car-card" data-category="electrique" data-transmission="auto" data-price="650" data-aos="fade-up" data-aos-delay="700">
-          <div class="car-image">
-            <img src="https://cdn.pixabay.com/photo/2017/08/10/08/14/electric-car-2619267_960_720.jpg" alt="Tesla Model 3">
-            <span class="tag">Électrique</span>
-            <span class="availability available"><i class="fas fa-check"></i> Disponible</span>
-          </div>
-          <div class="car-details">
-            <h3>Tesla Model 3</h3>
-            <p>Électrique premium, autonomie 500km</p>
-            <div class="specs">
-              <span><i class="fas fa-users"></i> 5</span>
-              <span><i class="fas fa-bolt"></i> Électrique</span>
-              <span><i class="fas fa-wifi"></i> Autopilot</span>
-            </div>
-            <div class="price">650 DH <small>/ jour</small></div>
-            <button class="btn-select" data-car="Tesla Model 3 650 DH" data-price="650">Réserver</button>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Témoignages -->
-  <section id="testimonials" style="padding: 5rem 0; background: var(--card);">
-    <div class="container">
-      <h2 data-aos="fade-up">Ce que disent nos clients</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-        <div data-aos="fade-up" data-aos-delay="100" style="text-align: center; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--bg);">
-          <p>"Parfait pour la CAN ! Livraison au stade, -30% avec badge. Super service."</p>
-          <strong>- Ahmed, Casablanca</strong>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200" style="text-align: center; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--bg);">
-          <p>"Tesla électrique top pour Marrakech. Éco et fun !"</p>
-          <strong>- Sara, Rabat</strong>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300" style="text-align: center; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--bg);">
-          <p>"Prix clair, add-ons utiles comme le siège bébé. Recommandé !"</p>
-          <strong>- Karim, Tanger</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stades -->
-  <section id="stades" class="stades">
-    <div class="container">
-      <h2 data-aos="fade-up">Livraison directe aux stades</h2>
-      <p class="section-desc" data-aos="fade-up" data-aos-delay="100">Retrait dans 6 villes • Livraison gratuite à votre hôtel ou stade</p>
-      <div class="map" data-aos="fade-up" data-aos-delay="200">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26548.456!2d-6.864!3d33.971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzE0LjAiTiA2wrA1MSc5MC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890"
-          allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking -->
-  <section id="book" class="booking">
-    <div class="container">
-      <h2 data-aos="fade-up">Réservation instantanée</h2>
-      <form id="bookingForm" class="booking-form" data-aos="fade-up" data-aos-delay="100">
-        <div class="form-group">
-          <label>Voiture sélectionnée</label>
-          <input type="text" id="selectedCar" readonly placeholder="Cliquez sur une voiture ci-dessus">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Début</label>
-            <input type="date" id="startDate" required>
-          </div>
-          <div class="form-group">
-            <label>Fin</label>
-            <input type="date" id="endDate" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Ville de retrait</label>
-          <select id="city" required>
-            <option value="">Choisir</option>
-            <option>Casablanca</option>
-            <option>Rabat</option>
-            <option>Marrakech</option>
-            <option>Tanger</option>
-            <option>Agadir</option>
-            <option>Fès</option>
+        <!-- Filtres -->
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
+          <select id="carCategory" aria-label="Catégorie">
+            <option value="">Toutes catégories</option>
+            <option value="economique" data-tr="Économique">Économique</option>
+            <option value="suv" data-tr="SUV">SUV</option>
+            <option value="luxe" data-tr="Luxe">Luxe</option>
+            <option value="electrique" data-tr="Électrique">Électrique</option>
           </select>
-        </div>
-        <div class="form-group checkbox">
-          <label><input type="checkbox" id="insurance" data-price="50"> Assurance complète (+50 DH/jour)</label>
-        </div>
-        <div class="form-group checkbox">
-          <label><input type="checkbox" id="babySeat" data-price="20"> Siège bébé (+20 DH)</label>
-        </div>
-        <div class="form-group checkbox">
-          <label><input type="checkbox" id="gps"> GPS (Inclus)</label>
-        </div>
-        <div class="form-group checkbox">
-          <label><input type="checkbox" id="badge"> J'ai un badge CAN (-30%)</label>
-        </div>
-        <div class="price-summary" id="priceSummary">
-          <p>Prix total : <strong id="totalPrice">0 DH</strong></p>
-          <p id="discountText"></p>
-          <p id="addonsText"></p>
-        </div>
-        <button type="submit" class="btn-book">Confirmer la réservation</button>
-      </form>
-      <p id="bookingConfirm" class="confirm-msg hidden"></p>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 data-aos="fade-up">Nous contacter</h2>
-      <p style="text-align: center; margin-bottom: 1rem;">Téléchargez notre app pour bookings mobiles ! <a href="#" style="color: var(--primary);">App Store / Google Play</a></p>
-      <form id="contactForm" data-aos="fade-up" data-aos-delay="100">
-        <input type="text" placeholder="Nom complet" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Votre message" rows="4" required></textarea>
-        <button type="submit" class="btn-contact">Envoyer</button>
-      </form>
-      <p id="contactMsg" class="confirm-msg hidden"></p>
-    </div>
-  </section>
+          <select id="transmission" aria-label="Transmission">
+            <option value="">Transmission</option>
+            <option value="manuelle" data-tr="Manuelle">Manuelle</option>
+            <option value="auto" data-tr="Automatique">Automatique</option>
+          </select>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>©️ 2025 CANDrive.ma — Location premium pour la CAN 2025</p>
-    </div>
-  </footer>
+          <div class="price-filter">
+            <input type="range" id="priceRange" min="200" max="800" value="800" aria-label="Prix maximum">
+            <span id="priceValue">800 DH max</span>
+          </div>
 
+          <button id="clearFilters" class="btn-clear" data-tr="Effacer">Effacer</button>
+        </div>
+
+        <!-- GRILLE DES VOITURES -->
+        <div class="cars-grid" id="carsGrid"></div>
+
+        <!-- Bouton "Voir plus" -->
+        <div class="load-more" data-aos="fade-up">
+          <button id="loadMore" class="btn-primary" data-tr="Charger plus de véhicules">Charger plus de véhicules</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Ce que disent nos clients">Ce que disent nos clients</h2>
+        <div class="testimonials-grid">
+          <figure data-aos="fade-up" data-aos-delay="100">
+            <blockquote data-tr='"Livraison au stade en 15 min, -30% avec badge. Parfait !"'>"Livraison au stade en 15 min, -30% avec badge. Parfait !"</blockquote>
+            <figcaption>— <strong>Ahmed, Casablanca</strong></figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="200">
+            <blockquote data-tr='"Tesla Model 3 à Marrakech → expérience inoubliable."'>"Tesla Model 3 à Marrakech → expérience inoubliable."</blockquote>
+            <figcaption>— <strong>Sara, Rabat</strong></figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="300">
+            <blockquote data-tr='"Prix transparents, siège bébé inclus. Recommandé !"'>"Prix transparents, siège bébé inclus. Recommandé !"</blockquote>
+            <figcaption>— <strong>Karim, Tanger</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stades avec itinéraire -->
+    <section id="stades" class="stades section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Livraison directe aux stades">Livraison directe aux stades</h2>
+        <p class="section-desc" data-aos="fade-up" data-aos-delay="100" data-tr="Retrait gratuit dans 6 villes • Livraison hôtel ou stade">
+          Retrait gratuit dans 6 villes • Livraison hôtel ou stade
+        </p>
+
+        <div class="stadium-selector" data-aos="fade-up" data-aos-delay="200">
+          <select id="stadiumSelect">
+            <option value="casablanca">Stade Mohammed V - Casablanca</option>
+            <option value="marrakech">Stade de Marrakech</option>
+            <option value="rabat">Stade Prince Moulay Abdellah - Rabat</option>
+          </select>
+          <button id="showRoute" class="btn-primary accent">
+            <i class="fas fa-route"></i> <span data-tr="Voir l'itinéraire">Voir l'itinéraire</span>
+          </button>
+        </div>
+
+        <div class="map" id="mapContainer" data-aos="fade-up" data-aos-delay="300">
+          <iframe id="stadiumMap" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26548.456!2d-6.864!3d33.971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzE0LjAiTiA2wrA1MSc5MC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réservation -->
+    <section id="book" class="booking section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Réservation en 60 secondes">Réservation en 60 secondes</h2>
+        <form id="bookingForm" class="booking-form" novalidate data-aos="fade-up" data-aos-delay="100">
+          <div class="form-group">
+            <label for="selectedCar" data-tr="Voiture sélectionnée">Voiture sélectionnée</label>
+            <input type="text" id="selectedCar" readonly placeholder="Cliquez sur une voiture" data-tr-placeholder="Cliquez sur une voiture">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startDate" data-tr="Date de début">Date de début</label>
+              <input type="date" id="startDate" required>
+            </div>
+            <div class="form-group">
+              <label for="endDate" data-tr="Date de fin">Date de fin</label>
+              <input type="date" id="endDate" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="city" data-tr="Ville de retrait">Ville de retrait</label>
+            <select id="city" required>
+              <option value="">Choisir une ville</option>
+              <option>Casablanca</option>
+              <option>Rabat</option>
+              <option>Marrakech</option>
+              <option>Tanger</option>
+              <option>Agadir</option>
+              <option>Fès</option>
+            </select>
+          </div>
+
+          <div class="addons">
+            <label class="checkbox">
+              <input type="checkbox" id="insurance"> <span data-tr="Assurance complète (+50 DH/jour)">Assurance complète (+50 DH/jour)</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="babySeat"> <span data-tr="Siège bébé (+20 DH)">Siège bébé (+20 DH)</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="badge"> <span data-tr="Badge CAN 2025 (-30%)">Badge CAN 2025 (-30%)</span>
+            </label>
+          </div>
+
+          <div class="price-summary">
+            <p data-tr="Prix total :"><span data-tr="Prix total :">Prix total :</span> <strong id="totalPrice">0 DH</strong></p>
+            <p id="discountText" class="discount"></p>
+            <p id="addonsText" class="addons"></p>
+          </div>
+
+          <button type="submit" class="btn-book" data-tr="Confirmer la réservation">
+            <i class="fas fa-check"></i> Confirmer la réservation
+          </button>
+        </form>
+        <p id="bookingConfirm" class="confirm-msg hidden" role="alert"></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Nous contacter">Nous contacter</h2>
+        <p class="app-promo" data-tr="Téléchargez l'app mobile pour réserver en 1 clic !">Téléchargez l'app mobile pour réserver en 1 clic !</p>
+        <form id="contactForm" novalidate data-aos="fade-up" data-aos-delay="100">
+          <input type="text" placeholder="Nom complet" required aria-label="Nom" data-tr-placeholder="Nom complet">
+          <input type="email" placeholder="Email" required aria-label="Email" data-tr-placeholder="Email">
+          <textarea placeholder="Votre message" rows="4" required aria-label="Message" data-tr-placeholder="Votre message"></textarea>
+          <button type="submit" class="btn-contact" data-tr="Envoyer">Envoyer</button>
+        </form>
+        <p id="contactMsg" class="confirm-msg hidden" role=" to="alert"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot" class="chatbot" role="region" aria-label="Assistant CANBot">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div>
+        <strong>CANBot IA</strong>
+        <small data-tr="En ligne">En ligne</small>
+      </div>
+      <button class="chat-close" aria-label="Fermer le chat">×</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="quick-replies">
+      <button class="quick-btn" onclick="sendQuick('SUV disponible ?')" data-tr="SUV ?">SUV ?</button>
+      <button class="quick-btn" onclick="sendQuick('Tesla Casablanca')" data-tr="Tesla ?">Tesla ?</button>
+      <button class="quick-btn" onclick="sendQuick('Badge -30%')" data-tr="Badge">Badge</button>
+      <button class="quick-btn" onclick="sendQuick('Livraison stade')" data-tr="Stade">Stade</button>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" id="chatInput" placeholder="Posez votre question..." autocomplete="off" aria-label="Message" data-tr-placeholder="Posez votre question...">
+      <button id="chatSend" aria-label="Envoyer">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <button id="chatToggle" class="chat-toggle" aria-label="Ouvrir le chatbot">
+    <i class="fas fa-robot"></i>
+    <span class="chat-badge">IA</span>
+  </button>
+
+  <!-- PWA Install Button -->
+  <button id="installBtn" class="install-btn" style="display:none;">
+    <i class="fas fa-download"></i> <span data-tr="Installer l'app">Installer l'app</span>
+  </button>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
-  <!-- === CHATBOT GROK IA === -->
-<div id="chatbot" class="chatbot">
-  <div class="chat-header">
-    <div class="chat-avatar">
-      <i class="fas fa-robot"></i>
-    </div>
-    <div>
-      <strong>CANBot IA</strong>
-      <small>Assistant CAN 2025</small>
-    </div>
-    <button class="chat-close" onclick="toggleChat()">×</button>
-  </div>
-  <div id="chatMessages" class="chat-messages">
-    <div class="chat-message bot">
-      <strong>CANBot:</strong> Bonjour ! 👋<br>Comment puis-je vous aider pour la CAN 2025 ?<br><em>Ex: "SUV à Marrakech ?" ou "Offre badge"</em>
-    </div>
-  </div>
-  <div class="quick-replies" style="padding: 0.5rem 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; border-bottom: 1px solid var(--border);">
-  <button class="quick-btn" onclick="sendQuick('SUV disponible ?')">SUV ?</button>
-  <button class="quick-btn" onclick="sendQuick('Prix avec badge')">Badge -30%</button>
-  <button class="quick-btn" onclick="sendQuick('Tesla à Casablanca ?')">Tesla ?</button>
-  <button class="quick-btn" onclick="sendQuick('Livraison stade ?')">Stade</button>
-</div>
-  <div class="chat-input-container">
-    <input type="text" id="chatInput" class="chat-input" placeholder="Tapez votre question..." autocomplete="off">
-    <button id="chatSend" class="chat-send">
-      <i class="fas fa-paper-plane"></i>
-    </button>
-  </div>
-</div>
-
-<button id="chatToggle" class="chat-toggle" onclick="toggleChat()">
-  <i class="fas fa-robot"></i>
-  <span class="chat-badge">IA</span>
-</button>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'998c2d064dfd0524',t:'MTc2MjE3NjA5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
