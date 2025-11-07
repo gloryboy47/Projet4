@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CANDrive.ma | Location Voiture Premium CAN 2025 Maroc</title>
+  <meta name="description" content="Location de voitures premium pour la CAN 2025 au Maroc. -30% avec badge supporter. Livraison stade, Tesla, SUV, Réservation instantanée." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="CANDrive.ma - Location Voiture CAN 2025" />
+  <meta property="og:description" content="-30% avec badge. Livraison stade. Voitures premium." />
+  <meta property="og:image" content="https://candrive.ma/og-image.jpg" />
+  <meta property="og:url" content="https://candrive.ma" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0A5C36">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <button id="langFR" class="active">FR</button>
+    <button id="langEN">EN</button>
+    <button id="langAR">AR</button>
+  </div>
+
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <!-- Header -->
+  <header class="hero" id="home">
+    <nav class="navbar container" aria-label="Navigation principale">
+      <div class="logo">
+        <h1><span>CAN</span>Drive</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" data-tr="Accueil">Accueil</a></li>
+        <li><a href="#fleet" data-tr="Flotte">Flotte</a></li>
+        <li><a href="#stades" data-tr="Stades">Stades</a></li>
+        <li><a href="#book" data-tr="Réserver">Réserver</a></li>
+        <li><a href="#testimonials" data-tr="Avis">Avis</a></li>
+        <li><a href="#contact" data-tr="Contact">Contact</a></li>
+        <li><a href="#testimonials" data-tr="Avis">Avis</a></li>
+      </ul>
+      <button class="mobile-menu" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content container" data-aos="fade-up">
+      <h1 data-tr="Roulez en <span>Premium</span> pour la CAN 2025">Roulez en <span>Premium</span> pour la CAN 2025</h1>
+      <p class="subtitle" data-tr="Véhicules neufs • GPS inclus • Assurance • Livraison stade">Véhicules neufs • GPS inclus • Assurance • Livraison stade</p>
+
+      <!-- Compteur CAN 2025 -->
+      <div class="countdown" data-aos="zoom-in">
+        <div class="count-item"><span id="days">--</span><small data-tr="Jours">Jours</small></div>
+        <div class="count-item"><span id="hours">--</span><small data-tr="Heures">Heures</small></div>
+        <div class="count-item"><span id="mins">--</span><small data-tr="Min">Min</small></div>
+        <div class="count-item"><span id="secs">--</span><small data-tr="Sec">Sec</small></div>
+      </div>
+
+      <div class="offer-tag">
+        <i class="fas fa-ticket-alt"></i> <span data-tr="-30% avec badge supporter">-30% avec badge supporter</span>
+      </div>
+
+      <!-- Scanner Badge -->
+      <div class="badge-scanner" data-aos="fade-up" data-aos-delay="300">
+        <button id="scanBadge" class="btn-primary accent">
+          <i class="fas fa-qrcode"></i> <span data-tr="Scanner mon badge CAN (-30%)">Scanner mon badge CAN (-30%)</span>
+        </button>
+        <p class="small" data-tr="Photo ou scan → réduction immédiate">Photo ou scan → réduction immédiate</p>
+      </div>
+
+      <!-- Recherche rapide -->
+      <div class="search-bar">
+        <input type="text" id="quickSearch" placeholder="SUV, Tesla, Casablanca..." aria-label="Recherche rapide" data-tr-placeholder="SUV, Tesla, Casablanca...">
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#fleet" class="btn-primary" data-tr="Voir la flotte">Voir la flotte</a>
+        <a href="#book" class="btn-primary accent" data-tr="Réserver maintenant">Réserver maintenant</a>
+      </div>
+
+      <!-- Promo Flash -->
+      <div class="flash-promo" id="flashPromo">
+        <i class="fas fa-bolt"></i> <span data-tr="Offre Flash : Tesla Model 3 à 550 DH/jour !">Offre Flash : Tesla Model 3 à 550 DH/jour !</span>
+        <button id="closeFlash">×</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Flotte -->
+    <section id="fleet" class="fleet section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Notre flotte premium">Notre flotte premium</h2>
+        <p class="section-desc" data-aos="fade-up" data-aos-delay="100" data-tr="Modèles 2024/2025 • Entretien quotidien • Disponibilité garantie">
+          Modèles 2024/2025 • Entretien quotidien • Disponibilité garantie
+        </p>
+
+        <!-- Filtres -->
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
+          <select id="carCategory" aria-label="Catégorie">
+            <option value="">Toutes catégories</option>
+            <option value="economique" data-tr="Économique">Économique</option>
+            <option value="suv" data-tr="SUV">SUV</option>
+            <option value="luxe" data-tr="Luxe">Luxe</option>
+            <option value="electrique" data-tr="Électrique">Électrique</option>
+          </select>
+
+          <select id="transmission" aria-label="Transmission">
+            <option value="">Transmission</option>
+            <option value="manuelle" data-tr="Manuelle">Manuelle</option>
+            <option value="auto" data-tr="Automatique">Automatique</option>
+          </select>
+
+          <div class="price-filter">
+            <input type="range" id="priceRange" min="200" max="800" value="800" aria-label="Prix maximum">
+            <span id="priceValue">800 DH max</span>
+          </div>
+
+          <button id="clearFilters" class="btn-clear" data-tr="Effacer">Effacer</button>
+        </div>
+
+        <!-- GRILLE DES VOITURES -->
+        <div class="cars-grid" id="carsGrid">
+  <!-- Voiture 1 -->
+  <article class="car-card" data-category="economique" data-transmission="manuelle" data-price="280" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/dacia.jpg" alt="Dacia Sandero" loading="lazy">
+      <span class="tag">Économique</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Dacia Sandero</h3>
+      <p>Clim</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 5 places</span>
+        <span><i class="fas fa-check"></i> Essence</span>
+        <span><i class="fas fa-check"></i> Clim</span>
+      </div>
+      <div class="price">280 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Dacia Sandero 280 DH">Réserver</button>
+    </div>
+  </article>
+
+  <!-- Voiture 2 -->
+  <article class="car-card" data-category="suv" data-transmission="auto" data-price="480" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/tucson.jpg" alt="Hyundai Tucson" loading="lazy">
+      <span class="tag popular">Populaire</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Hyundai Tucson</h3>
+      <p>Tous risques</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 5 places</span>
+        <span><i class="fas fa-check"></i> 620L</span>
+        <span><i class="fas fa-check"></i> Tous risques</span>
+      </div>
+      <div class="price">480 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Hyundai Tucson 480 DH">Réserver</button>
+    </div>
+  </article>
+
+  <!-- Voiture 3 -->
+  <article class="car-card" data-category="luxe" data-transmission="auto" data-price="720" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/audi.jpg" alt="Audi A6" loading="lazy">
+      <span class="tag">Luxe</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Audi A6</h3>
+      <p>Auto</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 5 places</span>
+        <span><i class="fas fa-check"></i> WiFi</span>
+        <span><i class="fas fa-check"></i> Auto</span>
+      </div>
+      <div class="price">720 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Audi A6 720 DH">Réserver</button>
+    </div>
+  </article>
+
+  <!-- Voiture 4 -->
+  <article class="car-card" data-category="economique" data-transmission="manuelle" data-price="250" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/clio.jpg" alt="Renault Clio" loading="lazy">
+      <span class="tag">Économique</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Renault Clio</h3>
+      <p>Éco</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 4 places</span>
+        <span><i class="fas fa-check"></i> Essence</span>
+        <span><i class="fas fa-check"></i> Éco</span>
+      </div>
+      <div class="price">250 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Renault Clio 250 DH">Réserver</button>
+    </div>
+  </article>
+
+  <!-- Voiture 5 -->
+  <article class="car-card" data-category="suv" data-transmission="auto" data-price="550" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/3006.jpg" alt="Peugeot 3008" loading="lazy">
+      <span class="tag">SUV</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Peugeot 3008</h3>
+      <p>Assurance</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 5 places</span>
+        <span><i class="fas fa-check"></i> Hybride</span>
+        <span><i class="fas fa-check"></i> Assurance</span>
+      </div>
+      <div class="price">550 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Peugeot 3008 550 DH">Réserver</button>
+    </div>
+  </article>
+
+  <!-- Voiture 6 -->
+  <article class="car-card" data-category="electrique" data-transmission="auto" data-price="650" data-aos="fade-up">
+    <div class="car-image">
+      <img src="Cars/Tesla.jpg" alt="Tesla Model 3" loading="lazy">
+      <span class="tag">Électrique</span>
+      <span class="availability available">Disponible</span>
+    </div>
+    <div class="car-details">
+      <h3>Tesla Model 3</h3>
+      <p>Autopilot</p>
+      <div class="specs">
+        <span><i class="fas fa-check"></i> 5 places</span>
+        <span><i class="fas fa-check"></i> Électrique</span>
+        <span><i class="fas fa-check"></i> Autopilot</span>
+      </div>
+      <div class="price">650 DH <small>/ jour</small></div>
+      <button class="btn-select" data-car="Tesla Model 3 650 DH">Réserver</button>
+    </div>
+  </article>
+</div>
+
+        <!-- Bouton "Voir plus" -->
+        <div class="load-more" data-aos="fade-up">
+          <button id="loadMore" class="btn-primary" data-tr="Charger plus de véhicules">Charger plus de véhicules</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Ce que disent nos clients">Ce que disent nos clients</h2>
+        <div class="testimonials-grid">
+          <figure data-aos="fade-up" data-aos-delay="100">
+            <blockquote data-tr='"Livraison au stade en 15 min, -30% avec badge. Parfait !"'>"Livraison au stade en 15 min, -30% avec badge. Parfait !"</blockquote>
+            <figcaption>— <strong>Ahmed, Casablanca</strong></figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="200">
+            <blockquote data-tr='"Tesla Model 3 à Marrakech → expérience inoubliable."'>"Tesla Model 3 à Marrakech → expérience inoubliable."</blockquote>
+            <figcaption>— <strong>Sara, Rabat</strong></figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="300">
+            <blockquote data-tr='"Prix transparents, siège bébé inclus. Recommandé !"'>"Prix transparents, siège bébé inclus. Recommandé !"</blockquote>
+            <figcaption>— <strong>Karim, Tanger</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stades avec itinéraire -->
+    <section id="stades" class="stades section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Livraison directe aux stades">Livraison directe aux stades</h2>
+        <p class="section-desc" data-aos="fade-up" data-aos-delay="100" data-tr="Retrait gratuit dans 6 villes • Livraison hôtel ou stade">
+          Retrait gratuit dans 6 villes • Livraison hôtel ou stade
+        </p>
+
+        <div class="stadium-selector" data-aos="fade-up" data-aos-delay="200">
+          <select id="stadiumSelect">
+            <option value="casablanca">Stade Mohammed V - Casablanca</option>
+            <option value="marrakech">Stade de Marrakech</option>
+            <option value="rabat">Stade Prince Moulay Abdellah - Rabat</option>
+          </select>
+          <button id="showRoute" class="btn-primary accent">
+            <i class="fas fa-route"></i> <span data-tr="Voir l'itinéraire">Voir l'itinéraire</span>
+          </button>
+        </div>
+
+        <div class="map" id="mapContainer" data-aos="fade-up" data-aos-delay="300">
+          <iframe id="stadiumMap" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26548.456!2d-6.864!3d33.971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzE0LjAiTiA2wrA1MSc5MC4wIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réservation -->
+    <section id="book" class="booking section">
+      <div class="container">
+        <h2 data-aos="fade-up" data-tr="Réservation en 60 secondes">Réservation en 60 secondes</h2>
+        <form id="bookingForm" class="booking-form" novalidate data-aos="fade-up" data-aos-delay="100">
+          <div class="form-group">
+            <label for="selectedCar" data-tr="Voiture sélectionnée">Voiture sélectionnée</label>
+            <input type="text" id="selectedCar" readonly placeholder="Cliquez sur une voiture" data-tr-placeholder="Cliquez sur une voiture">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startDate" data-tr="Date de début">Date de début</label>
+              <input type="date" id="startDate" required>
+            </div>
+            <div class="form-group">
+              <label for="endDate" data-tr="Date de fin">Date de fin</label>
+              <input type="date" id="endDate" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="city" data-tr="Ville de retrait">Ville de retrait</label>
+            <select id="city" required>
+              <option value="">Choisir une ville</option>
+              <option>Casablanca</option>
+              <option>Rabat</option>
+              <option>Marrakech</option>
+              <option>Tanger</option>
+              <option>Agadir</option>
+              <option>Fès</option>
+            </select>
+          </div>
+
+          <div class="addons">
+            <label class="checkbox">
+              <input type="checkbox" id="insurance"> <span data-tr="Assurance complète (+50 DH/jour)">Assurance complète (+50 DH/jour)</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="babySeat"> <span data-tr="Siège bébé (+20 DH)">Siège bébé (+20 DH)</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" id="badge"> <span data-tr="Badge CAN 2025 (-30%)">Badge CAN 2025 (-30%)</span>
+            </label>
+          </div>
+
+          <div class="price-summary">
+            <p data-tr="Prix total :"><span data-tr="Prix total :">Prix total :</span> <strong id="totalPrice">0 DH</strong></p>
+            <p id="discountText" class="discount"></p>
+            <p id="addonsText" class="addons"></p>
+          </div>
+
+          <button type="submit" class="btn-book" data-tr="Confirmer la réservation">
+            <i class="fas fa-check"></i> Confirmer la réservation
+          </button>
+        </form>
+        <p id="bookingConfirm" class="confirm-msg hidden" role="alert"></p>
+      </div>
+    </section>
+
+   <!-- Infos + Carte -->
+<div data-aos="fade-left">
+  <!-- Infos de contact -->
+  <div class="contact-info" style="background:var(--card); padding:1.8rem; border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:2rem; border:1px solid var(--border); display:grid; gap:1.2rem;">
+    
+    <!-- Téléphone -->
+    <a href="tel:+212669695431" class="contact-item" style="display:flex; align-items:center; gap:1rem; text-decoration:none; color:var(--text); transition:0.3s;">
+      <div style="background:var(--primary); color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+        <i class="fas fa-phone"></i>
+      </div>
+      <div>
+        <strong>Téléphone</strong><br>
+        <span style="color:var(--primary);">+212 6 61 23 45 67</span>
+      </div>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/212669695431?text=Bonjour%20CANDrive%2C%20je%20veux%20réserver%20une%20voiture%20pour%20la%20CAN" 
+       target="_blank" 
+       rel="noopener" 
+       class="contact-item" 
+       style="display:flex; align-items:center; gap:1rem; text-decoration:none; color:var(--text); transition:0.3s;">
+      <div style="background:#25D366; color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <div>
+        <strong>WhatsApp</strong><br>
+        <span style="color:#25D366;">Message direct</span>
+      </div>
+    </a>
+
+    <!-- Email (ouvre Gmail) -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yassinehyn5002@gmail.com&su=Réservation%20CANDrive&body=Bonjour,%0A%0AJe%20souhaite%20réserver%20une%20voiture%20pour%20la%20CAN%202025." 
+       target="_blank" 
+       rel="noopener" 
+       class="contact-item" 
+       style="display:flex; align-items:center; gap:1rem; text-decoration:none; color:var(--text); transition:0.3s;">
+      <div style="background:#0A5C36; color:white; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div>
+        <strong>Email</strong><br>
+        <span style="color:var(--primary);">yassinehyn5002@gmail.com</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Mini carte -->
+  <div class="contact-map" style="height:260px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-8.002228!3d31.629472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5954d29ee1bd5586!2sCasablanca!5e0!3m2!1sfr!2sma!4v1730900000000" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+  </div>
+</section>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot" class="chatbot" role="region" aria-label="Assistant CANBot">
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div>
+        <strong>CANBot IA</strong>
+        <small data-tr="En ligne">En ligne</small>
+      </div>
+      <button class="chat-close" aria-label="Fermer le chat">×</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="quick-replies">
+      <button class="quick-btn" onclick="sendQuick('SUV disponible ?')" data-tr="SUV ?">SUV ?</button>
+      <button class="quick-btn" onclick="sendQuick('Tesla Casablanca')" data-tr="Tesla ?">Tesla ?</button>
+      <button class="quick-btn" onclick="sendQuick('Badge -30%')" data-tr="Badge">Badge</button>
+      <button class="quick-btn" onclick="sendQuick('Livraison stade')" data-tr="Stade">Stade</button>
+    </div>
+    <div class="chat-input-container">
+      <input type="text" id="chatInput" placeholder="Posez votre question..." autocomplete="off" aria-label="Message" data-tr-placeholder="Posez votre question...">
+      <button id="chatSend" aria-label="Envoyer">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
+  <button id="chatToggle" class="chat-toggle" aria-label="Ouvrir le chatbot">
+    <i class="fas fa-robot"></i>
+    <span class="chat-badge">IA</span>
+  </button>
+
+  <!-- PWA Install Button -->
+  <button id="installBtn" class="install-btn" style="display:none;">
+    <i class="fas fa-download"></i> <span data-tr="Installer l'app">Installer l'app</span>
+  </button>
+  <!-- Section Paiement -->
+<section id="payment" class="payment section">
+  <div class="container">
+    <h2 data-aos="fade-up" data-tr="Paiement sécurisé">Paiement sécurisé</h2>
+    <p class="section-desc" data-aos="fade-up" data-aos-delay="100" data-tr="Payez en toute sécurité avec carte, virement ou à la livraison">
+      Payez en toute sécurité avec carte, virement ou à la livraison
+    </p>
+
+    <form id="paymentForm" class="booking-form" novalidate data-aos="fade-up" data-aos-delay="200">
+      <div class="form-group">
+        <label data-tr="Méthode de paiement">Méthode de paiement</label>
+        <div class="payment-methods">
+          <label class="checkbox">
+            <input type="radio" name="method" value="card" checked> 
+            <span><i class="fas fa-credit-card"></i> Carte bancaire</span>
+          </label>
+          <label class="checkbox">
+            <input type="radio" name="method" value="cash"> 
+            <span><i class="fas fa-money-bill"></i> À la livraison</span>
+          </label>
+          <label class="checkbox">
+            <input type="radio" name="method" value="bank"> 
+            <span><i class="fas fa-university"></i> Virement bancaire</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="cardFields">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cardNumber" data-tr="Numéro de carte">Numéro de carte</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+          <div class="form-group">
+            <label for="cardExpiry" data-tr="MM/AA">MM/AA</label>
+            <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cardCVV" data-tr="CVV">CVV</label>
+          <input type="text" id="cardCVV" placeholder="123" maxlength="4">
+        </div>
+      </div>
+
+      <div class="price-summary">
+        <p><span data-tr="Montant à payer :">Montant à payer :</span> <strong id="paymentAmount">0 DH</strong></p>
+      </div>
+
+      <button type="submit" class="btn-book" data-tr="Payer maintenant">
+        <i class="fas fa-lock"></i> Payer maintenant
+      </button>
+    </form>
+    <p id="paymentMsg" class="confirm-msg hidden" role="alert"></p>
+  </div>
+</section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="login.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const existingConnexion = navLinks.querySelector('a[href="login.html"]');
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    // Supprimer le lien "Connexion" s'il existe
+    if (existingConnexion) {
+      existingConnexion.parentElement.remove();
+    }
+
+    if (loggedInUser) {
+      // Utilisateur connecté → afficher nom + déconnexion
+      const userItem = document.createElement('li');
+      userItem.innerHTML = `
+        <a href="#" id="userMenu">
+          <i class="fas fa-user"></i> ${loggedInUser.name.split(' ')[0]}
+          <span id="logoutLink" style="font-size:0.8rem; margin-left:0.5rem; color:#ccc;">(Déconnexion)</span>
+        </a>
+      `;
+      navLinks.appendChild(userItem);
+
+      document.getElementById('logoutLink').addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('loggedInUser');
+        window.location.reload();
+      });
+    } else {
+      // Pas connecté → lien Connexion
+      const loginItem = document.createElement('li');
+      loginItem.innerHTML = `<a href="login.html">Connexion</a>`;
+      navLinks.appendChild(loginItem);
+    }
+  });
+</script>
+<script>
+  // Afficher l'utilisateur connecté + bouton Déconnexion
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    // Supprime tout ancien lien "Connexion" ou "Déconnexion"
+    const oldItem = navLinks.querySelector('li.user-menu-item');
+    if (oldItem) oldItem.remove();
+
+    if (loggedInUser) {
+      // Ajoute le menu utilisateur avec déconnexion
+      const userItem = document.createElement('li');
+      userItem.className = 'user-menu-item';
+      userItem.innerHTML = `
+        <a href="#" id="userDropdown">
+          <i class="fas fa-user"></i> ${loggedInUser.name.split(' ')[0]}
+          <i class="fas fa-caret-down" style="font-size:0.8rem; margin-left:4px;"></i>
+        </a>
+        <div id="dropdownMenu" class="dropdown-menu">
+          <a href="#" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Déconnexion
+          </a>
+        </div>
+      `;
+      navLinks.appendChild(userItem);
+
+      // Ouvre/ferme le menu
+      document.getElementById('userDropdown').addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('dropdownMenu').classList.toggle('show');
+      });
+
+      // Déconnexion
+      document.getElementById('logoutBtn').addEventListener('click', e => {
+        e.preventDefault();
+        localStorage.removeItem('loggedInUser');
+        alert('Vous êtes déconnecté !');
+        window.location.reload();
+      });
+
+      // Ferme le menu si clic ailleurs
+      document.addEventListener('click', e => {
+        if (!e.target.closest('#userDropdown')) {
+          document.getElementById('dropdownMenu').classList.remove('show');
+        }
+      });
+    } else {
+      // Pas connecté → lien Connexion
+      const loginItem = document.createElement('li');
+      loginItem.className = 'user-menu-item';
+      loginItem.innerHTML = `<a href="login.html">Connexion</a>`;
+      navLinks.appendChild(loginItem);
+    }
+  });
+</script>
+<footer style="background:var(--primary); color:white; padding:2rem 0; text-align:center; margin-top:4rem;">
+  <div class="container">
+    <p>&copy; 2025 CANDrive.ma - Location Premium CAN 2025</p>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">
+      <a href="privacy.html" style="color:#FFC107; margin:0 1rem;">Confidentialité</a> |
+      <a href="cgv.html" style="color:#FFC107; margin:0 1rem;">CGV</a> |
+      <a href="mailto:contact@candrive.ma" style="color:#FFC107; margin:0 1rem;">Contact</a>
+    </p>
+  </div>
+</footer>
+<!-- Bouton Appel Mobile -->
+<a href="tel:+212600000000" class="mobile-call-btn" aria-label="Appeler CANDrive">
+  <i class="fas fa-phone"></i>
+</a>
+<!-- Bouton WhatsApp Mobile -->
+<a href="https://wa.me/212669695431?text=Bonjour%20CANDrive%2C%20je%20veux%20réserver%20une%20voiture%20pour%20la%20CAN"
+   class="mobile-whatsapp-btn"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contacter CANDrive sur WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+<!-- Bouton Retour en haut -->
+<button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</html>

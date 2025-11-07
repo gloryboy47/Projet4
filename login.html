@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CANDrive.ma | Connexion & Inscription</title>
+  <meta name="description" content="Connexion et inscription pour réserver des voitures premium CAN 2025." />
+  
+  <!-- Favicon & PWA -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0A5C36">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <button id="langFR" class="active">FR</button>
+    <button id="langEN">EN</button>
+    <button id="langAR">AR</button>
+  </div>
+
+  <!-- Skip to content -->
+  <a href="#main" class="skip-link">Aller au contenu</a>
+
+  <!-- Header -->
+  <header class="hero">
+    <nav class="navbar container">
+      <div class="logo">
+        <h1><span>CAN</span>Drive</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-tr="Accueil">Accueil</a></li>
+        <li><a href="index.html#fleet" data-tr="Flotte">Flotte</a></li>
+        <li><a href="index.html#book" data-tr="Réserver">Réserver</a></li>
+        <li><a href="index.html#payment" data-tr="Paiement">Paiement</a></li>
+        <li><a href="index.html#contact" data-tr="Contact">Contact</a></li>
+        <li><a href="logine.html" data-tr="Connexion" class="active">Connexion</a></li>
+      </ul>
+      <button class="mobile-menu" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content container" data-aos="fade-up">
+      <h1 data-tr="Connexion ou Inscription">Connexion ou Inscription</h1>
+      <p class="subtitle" data-tr="Accédez à votre compte pour réserver en 1 clic">Accédez à votre compte pour réserver en 1 clic</p>
+    </div>
+  </header>
+
+  <main id="main" class="login-main">
+
+    <!-- Connexion -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-card" data-aos="fade-up">
+          <h2 data-tr="Se connecter">Se connecter</h2>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="loginEmail" data-tr="Email">Email</label>
+              <input type="email" id="loginEmail" required placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+              <label for="loginPassword" data-tr="Mot de passe">Mot de passe</label>
+              <input type="password" id="loginPassword" required placeholder="********">
+            </div>
+            <button type="submit" class="btn-book">
+              <i class="fas fa-sign-in-alt"></i> <span data-tr="Se connecter">Se connecter</span>
+            </button>
+          </form>
+          <p id="loginMsg" class="confirm-msg hidden"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inscription -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-card" data-aos="fade-up" data-aos-delay="100">
+          <h2 data-tr="Créer un compte">Créer un compte</h2>
+          <form id="signupForm" novalidate>
+            <div class="form-group">
+              <label for="signupName" data-tr="Nom complet">Nom complet</label>
+              <input type="text" id="signupName" required placeholder="Jean Dupont">
+            </div>
+            <div class="form-group">
+              <label for="signupEmail" data-tr="Email">Email</label>
+              <input type="email" id="signupEmail" required placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+              <label for="signupPassword" data-tr="Mot de passe">Mot de passe</label>
+              <input type="password" id="signupPassword" required placeholder="********">
+            </div>
+            <div class="form-group">
+              <label for="signupConfirm" data-tr="Confirmer">Confirmer</label>
+              <input type="password" id="signupConfirm" required placeholder="********">
+            </div>
+            <button type="submit" class="btn-book accent">
+              <i class="fas fa-user-plus"></i> <span data-tr="S'inscrire">S'inscrire</span>
+            </button>
+          </form>
+          <p id="signupMsg" class="confirm-msg hidden"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="login.js"></script>
+  
+</body>
+</html>
