@@ -32,7 +32,6 @@ function initApp() {
   setupPWA();
   setupStadiumMap();
   setupScanner();
-  renderCars();
 }
 
 function loadCars() {
@@ -224,9 +223,15 @@ function setupFlashPromo() {
 }
 
 function setupLanguage() {
-  document.getElementById('langFR').addEventListener('click', () => changeLang('fr'));
-  document.getElementById('langEN').addEventListener('click', () => changeLang('en'));
+  const buttons = document.querySelectorAll('.lang-switcher button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.id.replace('lang', '').toLowerCase();
+      changeLang(lang);
+    });
+  });
 }
+
 function changeLang(lang) {
   document.querySelectorAll('[data-tr]').forEach(el => {
     const key = el.getAttribute('data-tr');
@@ -344,4 +349,90 @@ function setupDates() {
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('startDate').min = today;
   document.getElementById('endDate').min = today;
+}
+function setupPayment() {
+  const form = document.getElementById('paymentForm');
+  const methodRadios = document.querySelectorAll('input[name="method"]');
+  const cardFields = document.getElementById('cardFields');
+  const amountDisplay = document.getElementById('paymentAmount');
+
+  // Afficher/masquer champs carte
+  methodRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      cardFields.style.display = radio.value === 'card' ? 'block' : 'none';
+    });
+  });
+
+  // Mettre à jour le montant
+  function updatePaymentAmount() {
+    const total = document.getElementById('totalPrice').textContent;
+    amountDisplay.textContent = total;
+  }
+
+  // Observer les changements de prix
+  const observer = new MutationObserver(updatePaymentAmount);
+  observer.observe(document.getElementById('totalPrice'), { childList: true, subtree: true });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = document.getElementById('paymentMsg');
+    const method = document.querySelector('input[name="method"]:checked').value;
+
+    if (method === 'card') {
+      msg.innerHTML = `Paiement par carte en cours... <br><small>Simulation : paiement accepté !</small>`;
+    } else if (method === 'cash') {
+      msg.textContent = 'Réservation confirmée ! Paiement à la livraison.';
+    } else {
+      msg.textContent = 'Virement en attente. Réservation confirmée après réception.';
+    }
+
+    msg.classList.remove('hidden');
+    setTimeout(() => msg.classList.add('hidden'), 6000);
+  });
+}
+
+// Ajouter dans initApp()
+document.addEventListener('DOMContentLoaded', () => {
+  // ... autres init
+  setupPayment();
+});
+// === BOUTON RETOUR EN HAUT ===
+const backToTopBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+  } else backToTopBtn.classList.remove('show');
+  }
+);
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+// === FORMULAIRE CONTACT ===
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const msg = document.getElementById('contactMsg');
+  
+  // Simulation envoi
+  showMessage(msg, 'Message envoyé ! Nous vous répondons sous 2h.', 'success');
+  
+  // Reset
+  this.reset();
+  document.querySelectorAll('.input-group label').forEach(l => {
+    l.style.top = '50%';
+    l.style.fontSize = '0.9rem';
+  });
+});
+
+function showMessage(el, text, type = 'success') {
+  el.textContent = text;
+  el.className = 'confirm-msg';
+  el.style.background = type === 'error' ? '#f8d7da' : '#d4edda';
+  el.style.color = type === 'error' ? '#721c24' : '#155724';
+  el.classList.remove('hidden');
+  setTimeout(() => el.classList.add('hidden'), 4000);
 }
